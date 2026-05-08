@@ -1,0 +1,277 @@
+openapi: 3.1.0
+info:
+  title: Azure Stream Analytics REST API
+  description: >-
+    Minimal OpenAPI definition for the Azure Stream Analytics management REST
+    API (via Azure Resource Manager) covering streaming jobs, inputs, outputs,
+    transformations, functions, and clusters.
+  version: '2020-03-01'
+  x-generated-from: https://learn.microsoft.com/en-us/rest/api/streamanalytics/
+  x-generated-by: claude-crawl-2026-05-08
+servers:
+  - url: https://management.azure.com
+    description: Azure Resource Manager
+security:
+  - bearerAuth: []
+tags:
+  - name: StreamingJobs
+  - name: Inputs
+  - name: Outputs
+  - name: Transformations
+  - name: Functions
+  - name: Clusters
+paths:
+  /subscriptions/{subscriptionId}/providers/Microsoft.StreamAnalytics/streamingjobs:
+    parameters:
+      - $ref: '#/components/parameters/SubscriptionId'
+      - $ref: '#/components/parameters/ApiVersion'
+    get:
+      tags: [StreamingJobs]
+      summary: List streaming jobs in subscription
+      operationId: listStreamingJobs
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericList'
+  /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StreamAnalytics/streamingjobs:
+    parameters:
+      - $ref: '#/components/parameters/SubscriptionId'
+      - $ref: '#/components/parameters/ResourceGroupName'
+      - $ref: '#/components/parameters/ApiVersion'
+    get:
+      tags: [StreamingJobs]
+      summary: List streaming jobs by resource group
+      operationId: listStreamingJobsByResourceGroup
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericList'
+  /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StreamAnalytics/streamingjobs/{jobName}:
+    parameters:
+      - $ref: '#/components/parameters/SubscriptionId'
+      - $ref: '#/components/parameters/ResourceGroupName'
+      - $ref: '#/components/parameters/JobName'
+      - $ref: '#/components/parameters/ApiVersion'
+    get:
+      tags: [StreamingJobs]
+      summary: Get streaming job
+      operationId: getStreamingJob
+      responses:
+        '200':
+          description: OK
+    put:
+      tags: [StreamingJobs]
+      summary: Create or replace streaming job
+      operationId: createOrReplaceStreamingJob
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GenericObject'
+      responses:
+        '200':
+          description: OK
+        '201':
+          description: Created
+    patch:
+      tags: [StreamingJobs]
+      summary: Update streaming job
+      operationId: updateStreamingJob
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GenericObject'
+      responses:
+        '200':
+          description: OK
+    delete:
+      tags: [StreamingJobs]
+      summary: Delete streaming job
+      operationId: deleteStreamingJob
+      responses:
+        '200':
+          description: OK
+        '202':
+          description: Accepted
+        '204':
+          description: No Content
+  /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StreamAnalytics/streamingjobs/{jobName}/start:
+    parameters:
+      - $ref: '#/components/parameters/SubscriptionId'
+      - $ref: '#/components/parameters/ResourceGroupName'
+      - $ref: '#/components/parameters/JobName'
+      - $ref: '#/components/parameters/ApiVersion'
+    post:
+      tags: [StreamingJobs]
+      summary: Start streaming job
+      operationId: startStreamingJob
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GenericObject'
+      responses:
+        '202':
+          description: Accepted
+  /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StreamAnalytics/streamingjobs/{jobName}/stop:
+    parameters:
+      - $ref: '#/components/parameters/SubscriptionId'
+      - $ref: '#/components/parameters/ResourceGroupName'
+      - $ref: '#/components/parameters/JobName'
+      - $ref: '#/components/parameters/ApiVersion'
+    post:
+      tags: [StreamingJobs]
+      summary: Stop streaming job
+      operationId: stopStreamingJob
+      responses:
+        '202':
+          description: Accepted
+  /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StreamAnalytics/streamingjobs/{jobName}/inputs:
+    parameters:
+      - $ref: '#/components/parameters/SubscriptionId'
+      - $ref: '#/components/parameters/ResourceGroupName'
+      - $ref: '#/components/parameters/JobName'
+      - $ref: '#/components/parameters/ApiVersion'
+    get:
+      tags: [Inputs]
+      summary: List inputs by streaming job
+      operationId: listInputsByStreamingJob
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericList'
+  /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StreamAnalytics/streamingjobs/{jobName}/outputs:
+    parameters:
+      - $ref: '#/components/parameters/SubscriptionId'
+      - $ref: '#/components/parameters/ResourceGroupName'
+      - $ref: '#/components/parameters/JobName'
+      - $ref: '#/components/parameters/ApiVersion'
+    get:
+      tags: [Outputs]
+      summary: List outputs by streaming job
+      operationId: listOutputsByStreamingJob
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericList'
+  /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StreamAnalytics/streamingjobs/{jobName}/transformations/{transformationName}:
+    parameters:
+      - $ref: '#/components/parameters/SubscriptionId'
+      - $ref: '#/components/parameters/ResourceGroupName'
+      - $ref: '#/components/parameters/JobName'
+      - in: path
+        name: transformationName
+        required: true
+        schema: { type: string }
+      - $ref: '#/components/parameters/ApiVersion'
+    get:
+      tags: [Transformations]
+      summary: Get transformation
+      operationId: getTransformation
+      responses:
+        '200':
+          description: OK
+    put:
+      tags: [Transformations]
+      summary: Create or replace transformation
+      operationId: createOrReplaceTransformation
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GenericObject'
+      responses:
+        '200':
+          description: OK
+        '201':
+          description: Created
+  /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StreamAnalytics/streamingjobs/{jobName}/functions:
+    parameters:
+      - $ref: '#/components/parameters/SubscriptionId'
+      - $ref: '#/components/parameters/ResourceGroupName'
+      - $ref: '#/components/parameters/JobName'
+      - $ref: '#/components/parameters/ApiVersion'
+    get:
+      tags: [Functions]
+      summary: List functions by streaming job
+      operationId: listFunctionsByStreamingJob
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericList'
+  /subscriptions/{subscriptionId}/providers/Microsoft.StreamAnalytics/clusters:
+    parameters:
+      - $ref: '#/components/parameters/SubscriptionId'
+      - $ref: '#/components/parameters/ApiVersion'
+    get:
+      tags: [Clusters]
+      summary: List clusters by subscription
+      operationId: listClustersBySubscription
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericList'
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  parameters:
+    SubscriptionId:
+      in: path
+      name: subscriptionId
+      required: true
+      schema: { type: string }
+    ResourceGroupName:
+      in: path
+      name: resourceGroupName
+      required: true
+      schema: { type: string }
+    JobName:
+      in: path
+      name: jobName
+      required: true
+      schema: { type: string }
+    ApiVersion:
+      in: query
+      name: api-version
+      required: true
+      schema:
+        type: string
+        default: '2020-03-01'
+  schemas:
+    GenericObject:
+      type: object
+      additionalProperties: true
+    GenericList:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/GenericObject'
+      additionalProperties: true

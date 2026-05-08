@@ -37,6 +37,8 @@ apis:
         url: https://learn.microsoft.com/en-us/rest/api/streamanalytics/
       - type: Authentication
         url: https://learn.microsoft.com/en-us/azure/active-directory/develop/authentication-flows-app-scenarios
+      - url: openapi/microsoft-azure-stream-analytics-openapi.yml
+        type: OpenAPI
 common:
   - type: Portal
     url: https://portal.azure.com/
