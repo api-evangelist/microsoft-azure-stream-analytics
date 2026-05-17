@@ -46,19 +46,19 @@ common:
     url: https://azure.microsoft.com/en-us/pricing/details/stream-analytics/
   - type: Documentation
     url: https://learn.microsoft.com/en-us/azure/stream-analytics/
-  - type: Getting Started
+  - type: GettingStarted
     url: https://learn.microsoft.com/en-us/azure/stream-analytics/stream-analytics-quick-create-portal
-  - type: Status
+  - type: StatusPage
     url: https://azure.status.microsoft/en-us/status
-  - type: Terms of Service
+  - type: TermsOfService
     url: https://www.microsoft.com/en-us/legal/terms-of-use
-  - type: Privacy Policy
+  - type: PrivacyPolicy
     url: https://privacy.microsoft.com/en-us/privacystatement
   - type: Support
     url: https://support.microsoft.com/
   - type: Blog
     url: https://azure.microsoft.com/en-us/blog/product/stream-analytics/
-  - type: Stack Overflow
+  - type: StackOverflow
     url: https://stackoverflow.com/questions/tagged/azure-stream-analytics
 maintainers:
   - FN: Kin Lane
