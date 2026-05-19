@@ -1,0 +1,303 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Azure Stream Analytics REST API — StreamingJobs
+  description: 'Azure Stream Analytics REST API — StreamingJobs. 8 operations. Lead operation: List streaming jobs in subscription.
+    Self-contained Naftiko capability covering one Microsoft Azure Stream Analytics business surface.'
+  tags:
+  - Microsoft Azure Stream Analytics
+  - StreamingJobs
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    MICROSOFT_AZURE_STREAM_ANALYTICS_API_KEY: MICROSOFT_AZURE_STREAM_ANALYTICS_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: microsoft-azure-stream-analytics-streamingjobs
+    baseUri: https://management.azure.com
+    description: Azure Stream Analytics REST API — StreamingJobs business capability. Self-contained, no shared references.
+    resources:
+    - name: subscriptions-subscriptionId-providers-Microsoft.StreamAnalytics-streamingjobs
+      path: /subscriptions/{subscriptionId}/providers/Microsoft.StreamAnalytics/streamingjobs
+      operations:
+      - name: liststreamingjobs
+        method: GET
+        description: List streaming jobs in subscription
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: subscriptions-subscriptionId-resourceGroups-resourceGroupName-providers-Microsof
+      path: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StreamAnalytics/streamingjobs
+      operations:
+      - name: liststreamingjobsbyresourcegroup
+        method: GET
+        description: List streaming jobs by resource group
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: subscriptions-subscriptionId-resourceGroups-resourceGroupName-providers-Microsof
+      path: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StreamAnalytics/streamingjobs/{jobName}
+      operations:
+      - name: getstreamingjob
+        method: GET
+        description: Get streaming job
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: createorreplacestreamingjob
+        method: PUT
+        description: Create or replace streaming job
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+      - name: updatestreamingjob
+        method: PATCH
+        description: Update streaming job
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+      - name: deletestreamingjob
+        method: DELETE
+        description: Delete streaming job
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: subscriptions-subscriptionId-resourceGroups-resourceGroupName-providers-Microsof
+      path: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StreamAnalytics/streamingjobs/{jobName}/start
+      operations:
+      - name: startstreamingjob
+        method: POST
+        description: Start streaming job
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: subscriptions-subscriptionId-resourceGroups-resourceGroupName-providers-Microsof
+      path: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StreamAnalytics/streamingjobs/{jobName}/stop
+      operations:
+      - name: stopstreamingjob
+        method: POST
+        description: Stop streaming job
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    authentication:
+      type: bearer
+      token: '{{env.MICROSOFT_AZURE_STREAM_ANALYTICS_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: microsoft-azure-stream-analytics-streamingjobs-rest
+    port: 8080
+    description: REST adapter for Azure Stream Analytics REST API — StreamingJobs. One Spectral-compliant resource per consumed
+      operation, prefixed with /v1.
+    resources:
+    - path: /v1/subscriptions/{subscriptionid}/providers/microsoft-streamanalytics/streamingjobs
+      name: subscriptions-subscriptionid-providers-microsoft-streamanalytics-streamingjobs
+      description: REST surface for subscriptions-subscriptionId-providers-Microsoft.StreamAnalytics-streamingjobs.
+      operations:
+      - method: GET
+        name: liststreamingjobs
+        description: List streaming jobs in subscription
+        call: microsoft-azure-stream-analytics-streamingjobs.liststreamingjobs
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft-streamanalytics/streamingjobs
+      name: subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsof
+      description: REST surface for subscriptions-subscriptionId-resourceGroups-resourceGroupName-providers-Microsof.
+      operations:
+      - method: GET
+        name: liststreamingjobsbyresourcegroup
+        description: List streaming jobs by resource group
+        call: microsoft-azure-stream-analytics-streamingjobs.liststreamingjobsbyresourcegroup
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft-streamanalytics/streamingjobs/{jobname}
+      name: subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsof
+      description: REST surface for subscriptions-subscriptionId-resourceGroups-resourceGroupName-providers-Microsof.
+      operations:
+      - method: GET
+        name: getstreamingjob
+        description: Get streaming job
+        call: microsoft-azure-stream-analytics-streamingjobs.getstreamingjob
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PUT
+        name: createorreplacestreamingjob
+        description: Create or replace streaming job
+        call: microsoft-azure-stream-analytics-streamingjobs.createorreplacestreamingjob
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PATCH
+        name: updatestreamingjob
+        description: Update streaming job
+        call: microsoft-azure-stream-analytics-streamingjobs.updatestreamingjob
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: DELETE
+        name: deletestreamingjob
+        description: Delete streaming job
+        call: microsoft-azure-stream-analytics-streamingjobs.deletestreamingjob
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft-streamanalytics/streamingjobs/{jobname}/start
+      name: subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsof
+      description: REST surface for subscriptions-subscriptionId-resourceGroups-resourceGroupName-providers-Microsof.
+      operations:
+      - method: POST
+        name: startstreamingjob
+        description: Start streaming job
+        call: microsoft-azure-stream-analytics-streamingjobs.startstreamingjob
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft-streamanalytics/streamingjobs/{jobname}/stop
+      name: subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsof
+      description: REST surface for subscriptions-subscriptionId-resourceGroups-resourceGroupName-providers-Microsof.
+      operations:
+      - method: POST
+        name: stopstreamingjob
+        description: Stop streaming job
+        call: microsoft-azure-stream-analytics-streamingjobs.stopstreamingjob
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: microsoft-azure-stream-analytics-streamingjobs-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Azure Stream Analytics REST API — StreamingJobs. One tool per consumed operation, routed
+      inline through this capability's consumes block.
+    tools:
+    - name: list-streaming-jobs-subscription
+      description: List streaming jobs in subscription
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: microsoft-azure-stream-analytics-streamingjobs.liststreamingjobs
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: list-streaming-jobs-resource-group
+      description: List streaming jobs by resource group
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: microsoft-azure-stream-analytics-streamingjobs.liststreamingjobsbyresourcegroup
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-streaming-job
+      description: Get streaming job
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: microsoft-azure-stream-analytics-streamingjobs.getstreamingjob
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: create-replace-streaming-job
+      description: Create or replace streaming job
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: microsoft-azure-stream-analytics-streamingjobs.createorreplacestreamingjob
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: update-streaming-job
+      description: Update streaming job
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: microsoft-azure-stream-analytics-streamingjobs.updatestreamingjob
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: delete-streaming-job
+      description: Delete streaming job
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: microsoft-azure-stream-analytics-streamingjobs.deletestreamingjob
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: start-streaming-job
+      description: Start streaming job
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: microsoft-azure-stream-analytics-streamingjobs.startstreamingjob
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: stop-streaming-job
+      description: Stop streaming job
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: microsoft-azure-stream-analytics-streamingjobs.stopstreamingjob
+      outputParameters:
+      - type: object
+        mapping: $.
