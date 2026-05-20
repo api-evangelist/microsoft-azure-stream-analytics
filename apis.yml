@@ -6,68 +6,70 @@ description: Azure Stream Analytics REST API provides management of real-time an
   and transformation queries using SQL-like syntax.
 image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-- Stream Processing
-- Real-Time Analytics
-- IoT
-- Event Processing
+  - Stream Processing
+  - Real-Time Analytics
+  - IoT
+  - Event Processing
 created: '2026-03-13'
 modified: '2026-05-19'
 specificationVersion: '0.20'
 apis:
-- aid: microsoft-azure-stream-analytics:rest-api
-  name: Azure Stream Analytics REST API
-  description: Azure Stream Analytics REST API provides management of real-time analytics jobs that process streaming data
-    from IoT devices, Event Hubs, and blob storage. It supports creating streaming jobs, defining input sources, output destinations,
-    and transformation queries using SQL-like syntax.
-  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
-  humanURL: https://learn.microsoft.com/en-us/rest/api/streamanalytics/
-  baseURL: https://management.azure.com/
-  tags:
-  - Streaming
-  - Analytics
-  - Jobs
-  - Inputs
-  - Outputs
-  properties:
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/rest/api/streamanalytics/
-  - type: Authentication
-    url: https://learn.microsoft.com/en-us/azure/active-directory/develop/authentication-flows-app-scenarios
-  - url: openapi/microsoft-azure-stream-analytics-openapi.yml
-    type: OpenAPI
-  - type: NaftikoCapability
-    url: capabilities/microsoft-azure-stream-analytics-clusters.yaml
-  - type: NaftikoCapability
-    url: capabilities/microsoft-azure-stream-analytics-functions.yaml
-  - type: NaftikoCapability
-    url: capabilities/microsoft-azure-stream-analytics-inputs.yaml
-  - type: NaftikoCapability
-    url: capabilities/microsoft-azure-stream-analytics-outputs.yaml
-  - type: NaftikoCapability
-    url: capabilities/microsoft-azure-stream-analytics-streamingjobs.yaml
-  - type: NaftikoCapability
-    url: capabilities/microsoft-azure-stream-analytics-transformations.yaml
+  - aid: microsoft-azure-stream-analytics:rest-api
+    name: Azure Stream Analytics REST API
+    description: Azure Stream Analytics REST API provides management of real-time analytics jobs that process streaming data
+      from IoT devices, Event Hubs, and blob storage. It supports creating streaming jobs, defining input sources, output destinations,
+      and transformation queries using SQL-like syntax.
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://learn.microsoft.com/en-us/rest/api/streamanalytics/
+    baseURL: https://management.azure.com/
+    tags:
+    - Streaming
+    - Analytics
+    - Jobs
+    - Inputs
+    - Outputs
+    properties:
+    - type: Documentation
+      url: https://learn.microsoft.com/en-us/rest/api/streamanalytics/
+    - type: Authentication
+      url: https://learn.microsoft.com/en-us/azure/active-directory/develop/authentication-flows-app-scenarios
+    - url: openapi/microsoft-azure-stream-analytics-openapi.yml
+      type: OpenAPI
+    - type: NaftikoCapability
+      url: capabilities/microsoft-azure-stream-analytics-clusters.yaml
+    - type: NaftikoCapability
+      url: capabilities/microsoft-azure-stream-analytics-functions.yaml
+    - type: NaftikoCapability
+      url: capabilities/microsoft-azure-stream-analytics-inputs.yaml
+    - type: NaftikoCapability
+      url: capabilities/microsoft-azure-stream-analytics-outputs.yaml
+    - type: NaftikoCapability
+      url: capabilities/microsoft-azure-stream-analytics-streamingjobs.yaml
+    - type: NaftikoCapability
+      url: capabilities/microsoft-azure-stream-analytics-transformations.yaml
 common:
-- type: Portal
-  url: https://portal.azure.com/
-- type: Pricing
-  url: https://azure.microsoft.com/en-us/pricing/details/stream-analytics/
-- type: Documentation
-  url: https://learn.microsoft.com/en-us/azure/stream-analytics/
-- type: GettingStarted
-  url: https://learn.microsoft.com/en-us/azure/stream-analytics/stream-analytics-quick-create-portal
-- type: StatusPage
-  url: https://azure.status.microsoft/en-us/status
-- type: TermsOfService
-  url: https://www.microsoft.com/en-us/legal/terms-of-use
-- type: PrivacyPolicy
-  url: https://privacy.microsoft.com/en-us/privacystatement
-- type: Support
-  url: https://support.microsoft.com/
-- type: Blog
-  url: https://azure.microsoft.com/en-us/blog/product/stream-analytics/
-- type: StackOverflow
-  url: https://stackoverflow.com/questions/tagged/azure-stream-analytics
+  - type: GitHubOrganization
+    url: https://github.com/Azure
+  - type: Portal
+    url: https://portal.azure.com/
+  - type: Pricing
+    url: https://azure.microsoft.com/en-us/pricing/details/stream-analytics/
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/azure/stream-analytics/
+  - type: GettingStarted
+    url: https://learn.microsoft.com/en-us/azure/stream-analytics/stream-analytics-quick-create-portal
+  - type: StatusPage
+    url: https://azure.status.microsoft/en-us/status
+  - type: TermsOfService
+    url: https://www.microsoft.com/en-us/legal/terms-of-use
+  - type: PrivacyPolicy
+    url: https://privacy.microsoft.com/en-us/privacystatement
+  - type: Support
+    url: https://support.microsoft.com/
+  - type: Blog
+    url: https://azure.microsoft.com/en-us/blog/product/stream-analytics/
+  - type: StackOverflow
+    url: https://stackoverflow.com/questions/tagged/azure-stream-analytics
 maintainers:
-- FN: Kin Lane
-  email: kin@apievangelist.com
+  - FN: Kin Lane
+    email: kin@apievangelist.com
