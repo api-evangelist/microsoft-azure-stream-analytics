@@ -1,9 +1,10 @@
 aid: microsoft-azure-stream-analytics
 url: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-stream-analytics/refs/heads/main/apis.yml
 name: Azure Stream Analytics
-description: Azure Stream Analytics REST API provides management of real-time analytics jobs that process streaming data from
-  IoT devices, Event Hubs, and blob storage. It supports creating streaming jobs, defining input sources, output destinations,
-  and transformation queries using SQL-like syntax.
+description: >-
+  Azure Stream Analytics REST API provides management of real-time analytics jobs that process streaming data from IoT
+  devices, Event Hubs, and blob storage. It supports creating streaming jobs, defining input sources, output
+  destinations, and transformation queries using SQL-like syntax.
 image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
   - Stream Processing
@@ -16,37 +17,26 @@ specificationVersion: '0.20'
 apis:
   - aid: microsoft-azure-stream-analytics:rest-api
     name: Azure Stream Analytics REST API
-    description: Azure Stream Analytics REST API provides management of real-time analytics jobs that process streaming data
-      from IoT devices, Event Hubs, and blob storage. It supports creating streaming jobs, defining input sources, output destinations,
-      and transformation queries using SQL-like syntax.
+    description: >-
+      Azure Stream Analytics REST API provides management of real-time analytics jobs that process streaming data from
+      IoT devices, Event Hubs, and blob storage. It supports creating streaming jobs, defining input sources, output
+      destinations, and transformation queries using SQL-like syntax.
     image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     humanURL: https://learn.microsoft.com/en-us/rest/api/streamanalytics/
     baseURL: https://management.azure.com/
     tags:
-    - Streaming
-    - Analytics
-    - Jobs
-    - Inputs
-    - Outputs
+      - Streaming
+      - Analytics
+      - Jobs
+      - Inputs
+      - Outputs
     properties:
-    - type: Documentation
-      url: https://learn.microsoft.com/en-us/rest/api/streamanalytics/
-    - type: Authentication
-      url: https://learn.microsoft.com/en-us/azure/active-directory/develop/authentication-flows-app-scenarios
-    - url: openapi/microsoft-azure-stream-analytics-openapi.yml
-      type: OpenAPI
-    - type: NaftikoCapability
-      url: capabilities/microsoft-azure-stream-analytics-clusters.yaml
-    - type: NaftikoCapability
-      url: capabilities/microsoft-azure-stream-analytics-functions.yaml
-    - type: NaftikoCapability
-      url: capabilities/microsoft-azure-stream-analytics-inputs.yaml
-    - type: NaftikoCapability
-      url: capabilities/microsoft-azure-stream-analytics-outputs.yaml
-    - type: NaftikoCapability
-      url: capabilities/microsoft-azure-stream-analytics-streamingjobs.yaml
-    - type: NaftikoCapability
-      url: capabilities/microsoft-azure-stream-analytics-transformations.yaml
+      - type: Documentation
+        url: https://learn.microsoft.com/en-us/rest/api/streamanalytics/
+      - type: Authentication
+        url: https://learn.microsoft.com/en-us/azure/active-directory/develop/authentication-flows-app-scenarios
+      - url: openapi/microsoft-azure-stream-analytics-openapi.yml
+        type: OpenAPI
 common:
   - type: GitHubOrganization
     url: https://github.com/Azure
