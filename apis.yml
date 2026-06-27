@@ -60,7 +60,7 @@ common:
     url: https://azure.microsoft.com/en-us/blog/product/stream-analytics/
   - type: StackOverflow
     url: https://stackoverflow.com/questions/tagged/azure-stream-analytics
-  - type: LLMsTxt
+  - type: LlmsText
     url: https://portal.azure.com/llms.txt
 maintainers:
   - FN: Kin Lane
