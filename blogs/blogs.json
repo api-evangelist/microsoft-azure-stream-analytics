@@ -2,11 +2,13 @@
   "repo": "microsoft-azure-stream-analytics",
   "feeds": [
     {
-      "source": "https://azure.microsoft.com/en-us/blog/product/stream-analytics/",
+      "source": "https://support.microsoft.com/",
+      "feed_url": "https://support.microsoft.com/",
+      "title": "",
       "saved": 0,
-      "error": "fetch timeout (60s) x2"
+      "method": "none"
     }
   ],
   "post_count": 10,
-  "fetched": "2026-06-27T12:57:58Z"
+  "fetched": "2026-07-11T11:50:51Z"
 }
