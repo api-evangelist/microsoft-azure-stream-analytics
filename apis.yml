@@ -38,6 +38,8 @@ apis:
       - url: openapi/microsoft-azure-stream-analytics-openapi.yml
         type: OpenAPI
 common:
+  - type: AgenticAccess
+    url: agentic-access/microsoft-azure-stream-analytics-agentic-access.yml
   - type: DomainSecurity
     url: security/microsoft-azure-stream-analytics-domain-security.yml
   - type: Authentication
