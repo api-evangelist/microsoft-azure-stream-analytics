@@ -1,0 +1,63 @@
+openapi: 3.1.0
+info:
+  title: Azure Stream Analytics REST Clusters API
+  description: Minimal OpenAPI definition for the Azure Stream Analytics management REST API (via Azure Resource Manager) covering streaming jobs, inputs, outputs, transformations, functions, and clusters.
+  version: '2020-03-01'
+  x-generated-from: https://learn.microsoft.com/en-us/rest/api/streamanalytics/
+  x-generated-by: claude-crawl-2026-05-08
+servers:
+- url: https://management.azure.com
+  description: Azure Resource Manager
+security:
+- bearerAuth: []
+tags:
+- name: Clusters
+paths:
+  /subscriptions/{subscriptionId}/providers/Microsoft.StreamAnalytics/clusters:
+    parameters:
+    - $ref: '#/components/parameters/SubscriptionId'
+    - $ref: '#/components/parameters/ApiVersion'
+    get:
+      tags:
+      - Clusters
+      summary: List clusters by subscription
+      operationId: listClustersBySubscription
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericList'
+components:
+  schemas:
+    GenericList:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/GenericObject'
+      additionalProperties: true
+    GenericObject:
+      type: object
+      additionalProperties: true
+  parameters:
+    ApiVersion:
+      in: query
+      name: api-version
+      required: true
+      schema:
+        type: string
+        default: '2020-03-01'
+    SubscriptionId:
+      in: path
+      name: subscriptionId
+      required: true
+      schema:
+        type: string
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT

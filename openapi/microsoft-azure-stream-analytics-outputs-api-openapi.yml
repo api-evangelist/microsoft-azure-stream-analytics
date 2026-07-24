@@ -1,0 +1,77 @@
+openapi: 3.1.0
+info:
+  title: Azure Stream Analytics REST Clusters Outputs API
+  description: Minimal OpenAPI definition for the Azure Stream Analytics management REST API (via Azure Resource Manager) covering streaming jobs, inputs, outputs, transformations, functions, and clusters.
+  version: '2020-03-01'
+  x-generated-from: https://learn.microsoft.com/en-us/rest/api/streamanalytics/
+  x-generated-by: claude-crawl-2026-05-08
+servers:
+- url: https://management.azure.com
+  description: Azure Resource Manager
+security:
+- bearerAuth: []
+tags:
+- name: Outputs
+paths:
+  ? /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StreamAnalytics/streamingjobs/{jobName}/outputs
+  : parameters:
+    - $ref: '#/components/parameters/SubscriptionId'
+    - $ref: '#/components/parameters/ResourceGroupName'
+    - $ref: '#/components/parameters/JobName'
+    - $ref: '#/components/parameters/ApiVersion'
+    get:
+      tags:
+      - Outputs
+      summary: List outputs by streaming job
+      operationId: listOutputsByStreamingJob
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericList'
+components:
+  parameters:
+    ApiVersion:
+      in: query
+      name: api-version
+      required: true
+      schema:
+        type: string
+        default: '2020-03-01'
+    JobName:
+      in: path
+      name: jobName
+      required: true
+      schema:
+        type: string
+    SubscriptionId:
+      in: path
+      name: subscriptionId
+      required: true
+      schema:
+        type: string
+    ResourceGroupName:
+      in: path
+      name: resourceGroupName
+      required: true
+      schema:
+        type: string
+  schemas:
+    GenericList:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/GenericObject'
+      additionalProperties: true
+    GenericObject:
+      type: object
+      additionalProperties: true
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
