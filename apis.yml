@@ -5,7 +5,20 @@ description: >-
   Azure Stream Analytics REST API provides management of real-time analytics jobs that process streaming data from IoT
   devices, Event Hubs, and blob storage. It supports creating streaming jobs, defining input sources, output
   destinations, and transformation queries using SQL-like syntax.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/microsoft-azure-stream-analytics.png
 tags:
   - Stream Processing
   - Real-Time Analytics
@@ -15,28 +28,97 @@ created: '2026-03-13'
 modified: '2026-05-19'
 specificationVersion: '0.20'
 apis:
-  - aid: microsoft-azure-stream-analytics:rest-api
-    name: Azure Stream Analytics REST API
-    description: >-
-      Azure Stream Analytics REST API provides management of real-time analytics jobs that process streaming data from
-      IoT devices, Event Hubs, and blob storage. It supports creating streaming jobs, defining input sources, output
-      destinations, and transformation queries using SQL-like syntax.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://learn.microsoft.com/en-us/rest/api/streamanalytics/
-    baseURL: https://management.azure.com/
-    tags:
-      - Streaming
-      - Analytics
-      - Jobs
-      - Inputs
-      - Outputs
-    properties:
-      - type: Documentation
-        url: https://learn.microsoft.com/en-us/rest/api/streamanalytics/
-      - type: Authentication
-        url: https://learn.microsoft.com/en-us/azure/active-directory/develop/authentication-flows-app-scenarios
-      - url: openapi/microsoft-azure-stream-analytics-openapi.yml
-        type: OpenAPI
+- aid: microsoft-azure-stream-analytics:microsoft-azure-stream-analytics-clusters-api
+  name: Azure Stream Analytics Clusters API
+  description: The Clusters API from Azure Stream Analytics — 1 operation(s) for clusters.
+  humanURL: https://learn.microsoft.com/en-us/rest/api/streamanalytics/
+  baseURL: https://management.azure.com/
+  tags:
+  - Clusters
+  properties:
+  - type: OpenAPI
+    url: openapi/microsoft-azure-stream-analytics-clusters-api-openapi.yml
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/streamanalytics/
+  - type: Authentication
+    url: >-
+      https://learn.microsoft.com/en-us/azure/active-directory/develop/authentication-flows-app-scenarios
+- aid: microsoft-azure-stream-analytics:microsoft-azure-stream-analytics-functions-api
+  name: Azure Stream Analytics Functions API
+  description: The Functions API from Azure Stream Analytics — 1 operation(s) for functions.
+  humanURL: https://learn.microsoft.com/en-us/rest/api/streamanalytics/
+  baseURL: https://management.azure.com/
+  tags:
+  - Functions
+  properties:
+  - type: OpenAPI
+    url: openapi/microsoft-azure-stream-analytics-functions-api-openapi.yml
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/streamanalytics/
+  - type: Authentication
+    url: >-
+      https://learn.microsoft.com/en-us/azure/active-directory/develop/authentication-flows-app-scenarios
+- aid: microsoft-azure-stream-analytics:microsoft-azure-stream-analytics-inputs-api
+  name: Azure Stream Analytics Inputs API
+  description: The Inputs API from Azure Stream Analytics — 1 operation(s) for inputs.
+  humanURL: https://learn.microsoft.com/en-us/rest/api/streamanalytics/
+  baseURL: https://management.azure.com/
+  tags:
+  - Inputs
+  properties:
+  - type: OpenAPI
+    url: openapi/microsoft-azure-stream-analytics-inputs-api-openapi.yml
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/streamanalytics/
+  - type: Authentication
+    url: >-
+      https://learn.microsoft.com/en-us/azure/active-directory/develop/authentication-flows-app-scenarios
+- aid: microsoft-azure-stream-analytics:microsoft-azure-stream-analytics-outputs-api
+  name: Azure Stream Analytics Outputs API
+  description: The Outputs API from Azure Stream Analytics — 1 operation(s) for outputs.
+  humanURL: https://learn.microsoft.com/en-us/rest/api/streamanalytics/
+  baseURL: https://management.azure.com/
+  tags:
+  - Outputs
+  properties:
+  - type: OpenAPI
+    url: openapi/microsoft-azure-stream-analytics-outputs-api-openapi.yml
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/streamanalytics/
+  - type: Authentication
+    url: >-
+      https://learn.microsoft.com/en-us/azure/active-directory/develop/authentication-flows-app-scenarios
+- aid: microsoft-azure-stream-analytics:microsoft-azure-stream-analytics-streamingjobs-api
+  name: Azure Stream Analytics StreamingJobs API
+  description: The StreamingJobs API from Azure Stream Analytics — 5 operation(s) for streamingjobs.
+  humanURL: https://learn.microsoft.com/en-us/rest/api/streamanalytics/
+  baseURL: https://management.azure.com/
+  tags:
+  - StreamingJobs
+  properties:
+  - type: OpenAPI
+    url: openapi/microsoft-azure-stream-analytics-streamingjobs-api-openapi.yml
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/streamanalytics/
+  - type: Authentication
+    url: >-
+      https://learn.microsoft.com/en-us/azure/active-directory/develop/authentication-flows-app-scenarios
+- aid: microsoft-azure-stream-analytics:microsoft-azure-stream-analytics-transformations-api
+  name: Azure Stream Analytics Transformations API
+  description: >-
+    The Transformations API from Azure Stream Analytics — 1 operation(s) for transformations.
+  humanURL: https://learn.microsoft.com/en-us/rest/api/streamanalytics/
+  baseURL: https://management.azure.com/
+  tags:
+  - Transformations
+  properties:
+  - type: OpenAPI
+    url: openapi/microsoft-azure-stream-analytics-transformations-api-openapi.yml
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/streamanalytics/
+  - type: Authentication
+    url: >-
+      https://learn.microsoft.com/en-us/azure/active-directory/develop/authentication-flows-app-scenarios
 common:
   - type: AgenticAccess
     url: agentic-access/microsoft-azure-stream-analytics-agentic-access.yml
