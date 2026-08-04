@@ -1,0 +1,24 @@
+{
+  "provider": "microsoft-azure-stream-analytics",
+  "sources": [
+    "microsoft-azure-stream-analytics-clusters-api-openapi.yml",
+    "microsoft-azure-stream-analytics-functions-api-openapi.yml",
+    "microsoft-azure-stream-analytics-inputs-api-openapi.yml",
+    "microsoft-azure-stream-analytics-outputs-api-openapi.yml",
+    "microsoft-azure-stream-analytics-streamingjobs-api-openapi.yml",
+    "microsoft-azure-stream-analytics-transformations-api-openapi.yml"
+  ],
+  "outputs": [
+    "microsoft-azure-stream-analytics-clusters-api-openapi.yml",
+    "microsoft-azure-stream-analytics-functions-api-openapi.yml",
+    "microsoft-azure-stream-analytics-inputs-api-openapi.yml",
+    "microsoft-azure-stream-analytics-outputs-api-openapi.yml",
+    "microsoft-azure-stream-analytics-streamingjobs-api-openapi.yml",
+    "microsoft-azure-stream-analytics-transformations-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
