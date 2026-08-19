@@ -1,0 +1,285 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Azure Stream Analytics REST Clusters StreamingJobs API",
+    "version": "2020-03-01"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "StreamingJobs",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List streaming jobs in subscription",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://management.azure.com/subscriptions/:subscriptionId/providers/Microsoft.StreamAnalytics/streamingjobs",
+            "params": [
+              {
+                "name": "subscriptionId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List streaming jobs in subscription"
+        },
+        {
+          "info": {
+            "name": "List streaming jobs by resource group",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://management.azure.com/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.StreamAnalytics/streamingjobs",
+            "params": [
+              {
+                "name": "subscriptionId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "resourceGroupName",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List streaming jobs by resource group"
+        },
+        {
+          "info": {
+            "name": "Get streaming job",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://management.azure.com/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.StreamAnalytics/streamingjobs/:jobName",
+            "params": [
+              {
+                "name": "subscriptionId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "resourceGroupName",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "jobName",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get streaming job"
+        },
+        {
+          "info": {
+            "name": "Create or replace streaming job",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://management.azure.com/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.StreamAnalytics/streamingjobs/:jobName",
+            "params": [
+              {
+                "name": "subscriptionId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "resourceGroupName",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "jobName",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create or replace streaming job"
+        },
+        {
+          "info": {
+            "name": "Update streaming job",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://management.azure.com/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.StreamAnalytics/streamingjobs/:jobName",
+            "params": [
+              {
+                "name": "subscriptionId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "resourceGroupName",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "jobName",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update streaming job"
+        },
+        {
+          "info": {
+            "name": "Delete streaming job",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://management.azure.com/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.StreamAnalytics/streamingjobs/:jobName",
+            "params": [
+              {
+                "name": "subscriptionId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "resourceGroupName",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "jobName",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Delete streaming job"
+        },
+        {
+          "info": {
+            "name": "Start streaming job",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://management.azure.com/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.StreamAnalytics/streamingjobs/:jobName/start",
+            "params": [
+              {
+                "name": "subscriptionId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "resourceGroupName",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "jobName",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Start streaming job"
+        },
+        {
+          "info": {
+            "name": "Stop streaming job",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://management.azure.com/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.StreamAnalytics/streamingjobs/:jobName/stop",
+            "params": [
+              {
+                "name": "subscriptionId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "resourceGroupName",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "jobName",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Stop streaming job"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
