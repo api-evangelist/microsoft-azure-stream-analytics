@@ -34,6 +34,8 @@ apis:
   humanURL: https://learn.microsoft.com/en-us/rest/api/streamanalytics/
   baseURL: https://management.azure.com/
   tags:
+  - Cluster
+  tags_raw:
   - Clusters
   properties:
   - type: OpenAPI
@@ -110,6 +112,8 @@ apis:
   humanURL: https://learn.microsoft.com/en-us/rest/api/streamanalytics/
   baseURL: https://management.azure.com/
   tags:
+  - Transformation
+  tags_raw:
   - Transformations
   properties:
   - type: OpenAPI
