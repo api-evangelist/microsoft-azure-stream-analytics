@@ -5,6 +5,18 @@ description: >-
   Azure Stream Analytics REST API provides management of real-time analytics jobs that process streaming data from IoT
   devices, Event Hubs, and blob storage. It supports creating streaming jobs, defining input sources, output
   destinations, and transformation queries using SQL-like syntax.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: self-serve
