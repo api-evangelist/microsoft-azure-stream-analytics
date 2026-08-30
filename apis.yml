@@ -124,7 +124,7 @@ apis:
   humanURL: https://learn.microsoft.com/en-us/rest/api/streamanalytics/
   baseURL: https://management.azure.com/
   tags:
-  - Transformation
+  - Transformations
   tags_raw:
   - Transformations
   properties:
