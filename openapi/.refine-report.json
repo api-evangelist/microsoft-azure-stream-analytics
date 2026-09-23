@@ -1,12 +1,7 @@
 {
   "provider": "microsoft-azure-stream-analytics",
   "sources": [
-    "microsoft-azure-stream-analytics-clusters-api-openapi.yml",
-    "microsoft-azure-stream-analytics-functions-api-openapi.yml",
-    "microsoft-azure-stream-analytics-inputs-api-openapi.yml",
-    "microsoft-azure-stream-analytics-outputs-api-openapi.yml",
-    "microsoft-azure-stream-analytics-streamingjobs-api-openapi.yml",
-    "microsoft-azure-stream-analytics-transformations-api-openapi.yml"
+    "_ae-authored/microsoft-azure-stream-analytics-openapi.yml"
   ],
   "outputs": [
     "microsoft-azure-stream-analytics-clusters-api-openapi.yml",
@@ -19,6 +14,17 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "microsoft-azure-stream-analytics-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "microsoft-azure-stream-analytics-clusters-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "microsoft-azure-stream-analytics-functions-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "microsoft-azure-stream-analytics-inputs-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "microsoft-azure-stream-analytics-outputs-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "microsoft-azure-stream-analytics-streamingjobs-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "microsoft-azure-stream-analytics-transformations-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
