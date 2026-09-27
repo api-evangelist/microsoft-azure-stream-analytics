@@ -137,10 +137,33 @@ paths:
         '202':
           description: Accepted
 components:
+  parameters:
+    ApiVersion:
+      in: query
+      name: api-version
+      required: true
+      schema:
+        type: string
+        default: '2020-03-01'
+    JobName:
+      in: path
+      name: jobName
+      required: true
+      schema:
+        type: string
+    SubscriptionId:
+      in: path
+      name: subscriptionId
+      required: true
+      schema:
+        type: string
+    ResourceGroupName:
+      in: path
+      name: resourceGroupName
+      required: true
+      schema:
+        type: string
   schemas:
-    GenericObject:
-      type: object
-      additionalProperties: true
     GenericList:
       type: object
       properties:
@@ -149,32 +172,9 @@ components:
           items:
             $ref: '#/components/schemas/GenericObject'
       additionalProperties: true
-  parameters:
-    ResourceGroupName:
-      in: path
-      name: resourceGroupName
-      required: true
-      schema:
-        type: string
-    ApiVersion:
-      in: query
-      name: api-version
-      required: true
-      schema:
-        type: string
-        default: '2020-03-01'
-    SubscriptionId:
-      in: path
-      name: subscriptionId
-      required: true
-      schema:
-        type: string
-    JobName:
-      in: path
-      name: jobName
-      required: true
-      schema:
-        type: string
+    GenericObject:
+      type: object
+      additionalProperties: true
   securitySchemes:
     bearerAuth:
       type: http

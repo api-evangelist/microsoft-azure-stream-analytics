@@ -49,17 +49,7 @@ paths:
         '201':
           description: Created
 components:
-  schemas:
-    GenericObject:
-      type: object
-      additionalProperties: true
   parameters:
-    ResourceGroupName:
-      in: path
-      name: resourceGroupName
-      required: true
-      schema:
-        type: string
     ApiVersion:
       in: query
       name: api-version
@@ -67,18 +57,28 @@ components:
       schema:
         type: string
         default: '2020-03-01'
-    SubscriptionId:
-      in: path
-      name: subscriptionId
-      required: true
-      schema:
-        type: string
     JobName:
       in: path
       name: jobName
       required: true
       schema:
         type: string
+    SubscriptionId:
+      in: path
+      name: subscriptionId
+      required: true
+      schema:
+        type: string
+    ResourceGroupName:
+      in: path
+      name: resourceGroupName
+      required: true
+      schema:
+        type: string
+  schemas:
+    GenericObject:
+      type: object
+      additionalProperties: true
   securitySchemes:
     bearerAuth:
       type: http
