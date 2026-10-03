@@ -50,22 +50,15 @@ paths:
           description: Created
 components:
   parameters:
-    ApiVersion:
-      in: query
-      name: api-version
-      required: true
-      schema:
-        type: string
-        default: '2020-03-01'
-    JobName:
-      in: path
-      name: jobName
-      required: true
-      schema:
-        type: string
     SubscriptionId:
       in: path
       name: subscriptionId
+      required: true
+      schema:
+        type: string
+    JobName:
+      in: path
+      name: jobName
       required: true
       schema:
         type: string
@@ -75,6 +68,13 @@ components:
       required: true
       schema:
         type: string
+    ApiVersion:
+      in: query
+      name: api-version
+      required: true
+      schema:
+        type: string
+        default: '2020-03-01'
   schemas:
     GenericObject:
       type: object
