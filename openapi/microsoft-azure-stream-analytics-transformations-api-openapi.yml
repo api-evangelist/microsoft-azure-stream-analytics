@@ -50,21 +50,15 @@ paths:
           description: Created
 components:
   parameters:
-    SubscriptionId:
-      in: path
-      name: subscriptionId
-      required: true
-      schema:
-        type: string
     JobName:
       in: path
       name: jobName
       required: true
       schema:
         type: string
-    ResourceGroupName:
+    SubscriptionId:
       in: path
-      name: resourceGroupName
+      name: subscriptionId
       required: true
       schema:
         type: string
@@ -75,6 +69,12 @@ components:
       schema:
         type: string
         default: '2020-03-01'
+    ResourceGroupName:
+      in: path
+      name: resourceGroupName
+      required: true
+      schema:
+        type: string
   schemas:
     GenericObject:
       type: object
